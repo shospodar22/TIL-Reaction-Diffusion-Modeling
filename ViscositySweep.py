@@ -18,10 +18,6 @@ coarse-grained parameters chosen so that Da spans ~0.1 to 100 across the
 experimental viscosity range. They are not molecular rate constants. Once
 experimental f_same data are available, k_bind can be fitted empirically.
 
-Sweep modes
------------
-  "eta"  : sweep viscosity, derive Da and D_sim from η
-  "Da"   : sweep Da directly — useful for mapping the full transition curve
 
 Usage
 -----
@@ -46,8 +42,8 @@ KB       = 1.380649e-23  # J/K
 # EFFECTIVE REACTION PARAMETERS
 # =========================================================
 
-K_CLEAVE = 1   # ms-1  effective cleavage rate  (scaled x100 vs original 1e-3)
-K_BIND   = 1e-2   # ms-1  effective binding rate   (scaled x100 vs original 1e-3)
+K_CLEAVE = 1   # ms-1  effective cleavage rate  
+K_BIND   = 1e-2   # ms-1  effective binding rate 
 R_CLEAVE = 8.0    # um    cleavage capture radius
 R_BIND   = 10.0   # um    binding capture radius
 
@@ -55,7 +51,7 @@ R_BIND   = 10.0   # um    binding capture radius
 # SWEEP MODE
 # =========================================================
 
-SWEEP_MODE = "eta"   # "eta" or "Da"
+SWEEP_MODE = "eta"  
 
 # =========================================================
 # VISCOSITY RANGE (used when SWEEP_MODE = "eta")
@@ -180,7 +176,7 @@ print(f"\nTotal runs: {len(sweep_params)}")
 # =========================================================
 
 PYTHON = sys.executable
-SIM    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "DahmkohlerModel2.py")
+SIM    = os.path.join(os.path.dirname(os.path.abspath(__file__)), "TILModel.py")
 
 RESULTS = []
 
