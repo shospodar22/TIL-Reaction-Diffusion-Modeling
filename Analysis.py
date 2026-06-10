@@ -3,10 +3,6 @@ Analysis for diffusion simulation results.
 
 Reads JSON result files produced by simulation.py and summarises results.
 
-Primary plot axis is the Damköhler number Da = k*r²/D, which directly
-controls same-cell binding fraction. Secondary axes show viscosity η
-(the experimental variable) and diffusion constant D.
-
 Outputs:
   - Summary table with SE
   - Per-result detailed printout
